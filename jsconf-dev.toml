@@ -1,0 +1,70 @@
+# fly.toml file generated for jsconf-dev on 2022-11-18T11:50:00-08:00
+
+app = "jsconf-dev"
+kill_signal = "SIGTERM"
+kill_timeout = 300
+processes = []
+
+[checks]
+  [checks.pg]
+    grace_period = "30s"
+    headers = []
+    interval = "15s"
+    method = "get"
+    path = "/flycheck/pg"
+    port = 5500
+    protocol = "http"
+    restart_limit = 0
+    timeout = "10s"
+    tls_skip_verify = false
+    type = "http"
+  [checks.role]
+    grace_period = "30s"
+    headers = []
+    interval = "15s"
+    method = "get"
+    path = "/flycheck/role"
+    port = 5500
+    protocol = "http"
+    restart_limit = 0
+    timeout = "10s"
+    tls_skip_verify = false
+    type = "http"
+  [checks.vm]
+    grace_period = "1s"
+    headers = []
+    interval = "1m"
+    method = "get"
+    path = "/flycheck/vm"
+    port = 5500
+    protocol = "http"
+    restart_limit = 0
+    timeout = "10s"
+    tls_skip_verify = false
+    type = "http"
+
+[env]
+  PRIMARY_REGION = "scl"
+
+[experimental]
+  allowed_public_ports = []
+  auto_rollback = false
+  enable_consul = true
+  private_network = true
+
+[[services]]
+  internal_port = 5432 # Postgres instance
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = []
+    port = 12501
+
+[metrics]
+  path = "/metrics"
+  port = 9187
+
+[[mounts]]
+  destination = "/data"
+  encrypted = false
+  source = "pg_data"

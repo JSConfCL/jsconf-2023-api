@@ -1,0 +1,46 @@
+{
+  "IS_STRING": {
+    "key": "{property}",
+    "message": "{property} debe ser un string"
+  },
+  "INVALID_EMAIL": {
+    "key": "{property}",
+    "message": "Email invalido"
+  },
+  "IS_INT": {
+    "key": "{property}",
+    "message": "{property} debe ser un numero"
+  },
+  "MAX_LENGTH": {
+    "key": "{property}",
+    "message": "{property} no puede contener mas de {constraints.0} caracteres"
+  },
+  "IS_ARRAY": {
+    "key": "{property}",
+    "message": "{property} debe ser un array"
+  },
+  "MIN_LENGTH": {
+    "key": "{property}",
+    "message": "{property} no puede contener menos de {constraints.0} caracteres"
+  },
+  "IS_IN": {
+    "key": "{property}",
+    "message": "{property} debe ser alguno de las siguiente opciones [{constraints.0}]"
+  },
+  "INVALID_BOOLEAN": {
+    "key": "{property}",
+    "message": "{property} debe ser de tipo boolean"
+  },
+  "MIN": {
+    "key": "{property}",
+    "message": "{property} debe ser menor a {constraints.0}"
+  },
+  "MAX": {
+    "key": "{property}",
+    "message": "{property} debe ser mayor a {constraints.0}"
+  },
+  "IS_UNIQUE": {
+    "key": "{property}",
+    "message": "{value} ya se encuentra en uso"
+  }
+}
